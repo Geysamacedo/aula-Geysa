@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "jest": "^30.4.2"
+  },
+  "name": "aula-geysa",
+  "version": "1.0.0",
+  "description": "Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!",
+  "main": "soma.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
