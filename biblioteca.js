@@ -83,11 +83,11 @@ const biblioteca = {
 },
       
     removerLivro(nome){
-        for(let i=0;i<this.livro.lenght;i++){
-            if(this.livro[i].nome.toLowercase()===nome.toLowercase()){
-                const removido = this.livro[i]
-                this.livro.splice(i,1);
-                console.log("Livro removido"+removido.nome);
+        for (let i = 0; i < this.livros.length; i++){
+            if(this.livros[i].nome.toLowerCase()===nome.toLowerCase()){
+                const removido = this.livros[i]
+                this.livros.splice(i,1);
+                console.log("Livros removido",removido.nome);
                 return;
                 }}console.log("Livro não encontrado")
             }
@@ -176,3 +176,5 @@ biblioteca.alugar("A Maldição do Verdadeiro Amor");
 
 // Devolve o livro
 biblioteca.devolver("A Maldição ddo Verdadeiro Amor");
+
+biblioteca.removerLivro("Harry Potter e a Pedra Filosofal")
