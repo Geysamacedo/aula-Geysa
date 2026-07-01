@@ -78,10 +78,23 @@ const biblioteca = {
             }
         }
 
-        console.log(`O livro "${nome}" não existe na biblioteca.`);
-    }
-};
+        
+    console.log(`O livro "${nome}" não existe na biblioteca.`)
+},
+      
+    removerLivro(nome){
+        for(let i=0;i<this.livro.lenght;i++){
+            if(this.livro[i].nome.toLowercase()===nome.toLowercase()){
+                const removido = this.livro[i]
+                this.livro.splice(i,1);
+                console.log("Livro removido"+removido.nome);
+                return;
+                }}console.log("Livro não encontrado")
+            }
 
+    
+
+}
 // Adicionando livros
 biblioteca.adicionarLivros(
     "ACOTAR",
@@ -154,15 +167,12 @@ biblioteca.adicionarLivros(
     "Aventura",
     1
 );
+    
+    
 
-// Mostra a lista de livros
-biblioteca.mostrarLivros();
 
 // Aluga um livro
 biblioteca.alugar("A Maldição do Verdadeiro Amor");
 
 // Devolve o livro
-biblioteca.devolver("A Maldição do Verdadeiro Amor");
-
-// Mostra apenas uma tabela no final
-biblioteca.mostrarTabela();
+biblioteca.devolver("A Maldição ddo Verdadeiro Amor");
